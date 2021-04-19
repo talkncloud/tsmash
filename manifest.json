@@ -1,0 +1,45 @@
+{
+
+    "manifest_version": 2,
+    "name": "tsmash",
+    "version": "1.0",
+  
+    "description": "tsmash - aws autofill delete input boxes",
+  
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.console.aws.amazon.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+
+    "options_ui": {
+      "page": "options.html",
+      "browser_style": true
+    },
+
+    "background": {
+      "scripts": [ "background.js" ]
+    },
+
+    "browser_action": {
+      "default_title": "tsmash - aws autofill delete options"
+    },
+
+    "permissions": [
+      "storage",
+      "tabs",
+      "*://*.console.aws.amazon.com/*"
+    ],
+
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "tsmash@talkncloud.com"
+      }
+    }
+  
+  }
