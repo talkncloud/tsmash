@@ -16,7 +16,6 @@ function findDeleteButton(selector, text) {
 function clickDeleteButton() {
     Array.prototype.forEach.call(
     document.querySelectorAll('input.awsui-input-type-text, input.awsui-textfield-type-text'), function(e) {
-        console.log("here i")
         e.focus();
 
         // Get intput placeholder text, if two words, use second word, if one word use single word
@@ -66,10 +65,11 @@ function clickDeleteButton() {
 function accountPref(accountId) {
     function onGot(result) {
         if (result !== null) {
-            // Check out save pref accounts
-            console.log(result.accounts)
-            // Make sure the account is not exluded and run
-            if (!result.accounts.includes(accountId)) {
+            // Is there an account set to exlcude
+            if (typeof result.accounts === 'undefined') {
+                // Find the delete buttons and process
+                findDeleteButton('button', 'elete')
+            } else if (!result.accounts.includes(accountId)) {
                 // Find the delete buttons and process
                 findDeleteButton('button', 'elete')
             }

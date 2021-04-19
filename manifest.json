@@ -2,12 +2,12 @@
 
     "manifest_version": 2,
     "name": "tsmash",
-    "version": "1.0",
+    "version": "1.1",
   
     "description": "tsmash - aws autofill delete input boxes",
   
     "icons": {
-      "48": "icons/border-48.png"
+      "48": "icons/tnc.png"
     },
   
     "content_scripts": [
