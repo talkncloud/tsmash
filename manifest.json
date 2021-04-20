@@ -2,9 +2,9 @@
 
     "manifest_version": 2,
     "name": "tsmash",
-    "version": "1.1",
+    "version": "1.2",
   
-    "description": "tsmash - aws autofill delete input boxes",
+    "description": "This basically auto-fills the delete text in AWS when you want to delete something. @talkncloud.",
   
     "icons": {
       "48": "icons/tnc.png"
@@ -27,7 +27,7 @@
     },
 
     "browser_action": {
-      "default_title": "tsmash - aws autofill delete options"
+      "default_title": "aws autofill delete by @talkncloud"
     },
 
     "permissions": [

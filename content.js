@@ -1,6 +1,7 @@
+var browser = browser || chrome;
+
 // Find all the delete buttons on the page
 function findDeleteButton(selector, text) {
-    console.log('run delete')
     var elements = document.querySelectorAll(selector);
     return Array.prototype.filter.call(elements, function(element){
         // Add a click listener to process on click
@@ -19,7 +20,6 @@ function clickDeleteButton() {
         e.focus();
 
         // Get intput placeholder text, if two words, use second word, if one word use single word
-        console.log(e.placeholder);
         let setWord;
         let placeholder = e.placeholder;
             placeLength = placeholder.split(/\W+/).length
@@ -29,7 +29,7 @@ function clickDeleteButton() {
             setWord = secondWord[1];
         // SNS
         } else if (placeholder === "delete me") {
-            let secondWord = placeholder.split(" ");
+            // let secondWord = placeholder.split(" ");
             setWord = placeholder;
         } 
          else if (placeLength === 1) {
@@ -62,8 +62,8 @@ function clickDeleteButton() {
 }
 
 // Is the account stored for bypass?
-function accountPref(accountId) {
-    function onGot(result) {
+function accountPref(accountId) {    
+    browser.storage.sync.get(['accounts'], function(result) {
         if (result !== null) {
             // Is there an account set to exlcude
             if (typeof result.accounts === 'undefined') {
@@ -75,14 +75,7 @@ function accountPref(accountId) {
             }
                         
         }
-      }
-    
-      function onError(error) {
-        console.log(`Error: ${error}`);
-      }
-    
-    let getting = browser.storage.local.get("accounts");
-    getting.then(onGot, onError);
+    });
 }
 
 function accountId() {
