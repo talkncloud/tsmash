@@ -13,6 +13,7 @@ It's a simple browser extension with support for Chrome and FireFox, simply use 
 https://addons.mozilla.org/en-US/firefox/addon/tsmash-for-aws/
 
 ### Chrome
+https://chrome.google.com/webstore/detail/tsmash/domdhiedcmknajdmhcfbplcahpmkmnff?hl=en-GB
 
 ## Options
 
