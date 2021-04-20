@@ -8,6 +8,7 @@ Well, this is a very simple helper to autofill the **AWS** input boxes when you 
 It's a simple browser extension with support for Chrome and FireFox, simply use the addons or extension to search for tsmash
 
 ### FireFox
+https://addons.mozilla.org/en-US/firefox/addon/tsmash-for-aws/
 
 ### Chrome
 
