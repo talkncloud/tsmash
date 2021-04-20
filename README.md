@@ -23,4 +23,4 @@ Being as simple as it is there are very few options, actually one. It takes a li
 
 I've done a bit of a write on on my blog if you wanna check it out:
 
-https://www.talkncloud.com/.../.../
+https://www.talkncloud.com/auto-filling-aws-delete-text-with-tsmash-browser-extension/
